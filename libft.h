@@ -6,7 +6,7 @@
 /*   By: Exiled <exiled@owly.com>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 23:43:08 by olahrizi          #+#    #+#             */
-/*   Updated: 2022/10/18 03:18:27 by Exiled           ###   ########.fr       */
+/*   Updated: 2022/10/20 04:12:42 by Exiled           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
 typedef struct s_list
 {

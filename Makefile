@@ -1,5 +1,5 @@
 NAME = libft.a
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 SRC = ft_atoi.c ft_isprint.c ft_memmove.c ft_strchr.c ft_strmapi.c ft_toupper.c ft_bzero.c ft_itoa.c \
@@ -20,7 +20,6 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 		ar -rc $(NAME) $(OBJ)
-		ranlib $(NAME)
 
 $(OBJ): $(SRC)
 	$(CC) -I ./ $(CFLAGS) -c $(SRC)
@@ -28,9 +27,8 @@ $(OBJ): $(SRC)
 $(OBONUS) : $(BONUS)
 		$(CC) -I ./ $(CFLAGS) -c $(BONUS)
 		ar -rc $(NAME) $(OBONUS) $(OBJ)
-		ranlib $(NAME)
 
-bonus: $(OBONUS) $(OBJ)
+bonus: $(OBJ) $(OBONUS)
 		
 clean:
 		$(RM) $(OBJ) $(OBONUS)

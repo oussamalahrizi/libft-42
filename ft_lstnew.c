@@ -6,7 +6,7 @@
 /*   By: Exiled <exiled@owly.com>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 03:00:27 by olahrizi          #+#    #+#             */
-/*   Updated: 2022/10/18 03:26:06 by Exiled           ###   ########.fr       */
+/*   Updated: 2022/10/19 05:39:59 by Exiled           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ t_list	*ft_lstnew(void *content)
 // int main (void)
 // {
 // 	t_list	*node;
-// 	node = ft_lstnew("123");
+//	char str[] = "123"
+// 	node = ft_lstnew(str);
 // 	printf("%s\n", node->content);
 // 	printf("%s", (char *)node->next);
 // }

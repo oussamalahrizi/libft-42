@@ -6,7 +6,7 @@
 /*   By: Exiled <exiled@owly.com>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 03:14:55 by olahrizi          #+#    #+#             */
-/*   Updated: 2022/10/18 03:25:35 by Exiled           ###   ########.fr       */
+/*   Updated: 2022/10/18 23:27:54 by Exiled           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,16 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*node;
 
-	if (new && *lst)
+	if (new)
 	{
-		node = ft_lstlast(*lst);
-		node->next = new;
+		if (*lst)
+		{
+			node = ft_lstlast(*lst);
+			node->next = new;
+		}
+		else
+			*lst = new;
 	}
-	else
-		*lst = new;
 }
 
 // #include <stdio.h>

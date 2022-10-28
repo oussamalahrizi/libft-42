@@ -6,7 +6,7 @@
 /*   By: Exiled <exiled@owly.com>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 00:13:57 by olahrizi          #+#    #+#             */
-/*   Updated: 2022/10/16 05:34:00 by Exiled           ###   ########.fr       */
+/*   Updated: 2022/10/20 03:19:11 by Exiled           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,18 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 
 // int main(void)
 // {
-// 	char s[5] = "world";
-// 	char *dest =  (void *)0;
-// 	printf("%zu\n", ft_strlcat(dest, s, 0));
-// 	//printf("%zu\n", strlcat(dest, s, 20));
+// 	char *s = "world";
+// 	// char *dest =  malloc(7);
+// 	// char *dest1 =  malloc(7);
+// 	char *dest = calloc(5 , 1);
+// 	char *dest1 = calloc(5 , 1);
+// 	ft_memset(dest, 'A', 5);
+// 	ft_memset(dest1, 'A', 5);
+// 	printf("mine : \n");
+// 	printf("%zu\n", ft_strlcat(dest, s, 7));
 // 	printf("%s\n", dest);
+// 	//printf("their : \n");
+// 	// printf("%zu\n", strlcat(dest1, s, 7)); 
+// 	// printf("%s\n", dest1);
 // 	return (0);
 // }

@@ -6,7 +6,7 @@
 /*   By: Exiled <exiled@owly.com>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 00:05:34 by olahrizi          #+#    #+#             */
-/*   Updated: 2022/10/17 03:47:31 by Exiled           ###   ########.fr       */
+/*   Updated: 2022/10/20 03:20:14 by Exiled           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*sub;
 
 	i = 0;
-	if (s == 0)
+	if (!s)
 		return (0);
 	if (start >= (unsigned int) ft_strlen(s))
 		return (ft_calloc(1, 1));

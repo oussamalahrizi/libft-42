@@ -6,7 +6,7 @@
 /*   By: Exiled <exiled@owly.com>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 03:32:41 by olahrizi          #+#    #+#             */
-/*   Updated: 2022/10/18 05:10:31 by Exiled           ###   ########.fr       */
+/*   Updated: 2022/10/19 05:32:37 by Exiled           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,40 +14,53 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*node;
+	t_list	*temp;
 
 	if (lst && del)
 	{
 		while (*lst)
 		{
-			node = *lst;
-			*lst = node->next;
-			ft_lstdelone(node, del);
+			temp = *lst;
+			*lst = (*lst)->next;
+			ft_lstdelone(temp, del);
 		}
-		lst = NULL;
 	}
 }
 
 // void del(void *content)
 // {
-// 	content = NULL;
+// 	(void) content;
 // }
 
 // #include <stdio.h>
 // int main (void)
 // {
-// 	t_list *a;
-// 	t_list *b;
-// 	t_list *c;
+// 	t_list *head;
+// 	t_list *middle;
+// 	t_list *end;
 
-// 	a = ft_lstnew("a");
-// 	b = ft_lstnew("b");
-// 	c = ft_lstnew("c");
-// 	ft_lstadd_back(&a, b);
-// 	ft_lstadd_back(&b, c);
-// 	printf("%s\n", a->content);
-// 	printf("%s\n", (a->next)->content);
-// 	printf("%s\n", (b->next)->content);
-// 	ft_lstclear(&a, del);
-// 	printf("%s\n", (char *)a);
+// 	head = ft_lstnew((void *)"a");
+// 	middle = ft_lstnew((void *)"b");
+// 	end = ft_lstnew((void *)"c");
+// 	ft_lstadd_back(&head, middle);
+// 	ft_lstadd_back(&head, end);
+
+// 	//t_list *temp = a;
+// 	// while (temp)
+// 	// {
+// 	// 	printf("%s\n", temp->content);
+// 	// 	temp = temp->next;
+// 	// }
+// 	// while (head)
+// 	// {
+// 	// 	printf("%s\n", head->content);
+// 	// 	head = head->next;
+// 	// }
+// 	ft_lstclear(&head, del);
+// 	printf("after clear \n");
+// 	while (head)
+// 	{
+// 		printf("%s\n", head->content);
+// 		head = head->next;
+// 	}
 // }

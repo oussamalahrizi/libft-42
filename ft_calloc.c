@@ -6,7 +6,7 @@
 /*   By: Exiled <exiled@owly.com>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 19:06:59 by olahrizi          #+#    #+#             */
-/*   Updated: 2022/10/10 00:03:41 by Exiled           ###   ########.fr       */
+/*   Updated: 2022/10/20 04:35:34 by Exiled           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nelem, size_t elsize)
 {
 	void	*result;
 
-	if (nelem == SIZE_MAX && elsize == SIZE_MAX)
+	if (nelem && elsize > SIZE_MAX / nelem)
 		return (0);
 	result = malloc(nelem * elsize);
 	if (!result)
